@@ -8,11 +8,26 @@
                 <div class="panel-heading">Tasks</div>
 
                 <div class="panel-body">
-                    @foreach ($tasks as $task)
-                        {{ $task->title }} - {{ $task->body }}<br>
-                    @endforeach
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>Action</th>
+                        </tr>
+                            @foreach ($tasks as $task)
+                                <tr>
+                                    <td>{{ $task->title }} - {{ $task->body }}</td>
+                                    <td>
+                                        edit
+                                        |
+                                        delete
+                                    </td>
+                                </tr>
+                                
+                            @endforeach
+                    </table>
                 </div>
             </div>
+            {{ link_to_route('task.create', 'Add new task', null, ['class' => 'btn btn-primary']) }}
         </div>
     </div>
 </div>
