@@ -27,7 +27,7 @@
                     </table>
                 </div>
             </div>
-            {{ link_to_route('task.create', 'Add new task', null, ['class' => 'btn btn-primary']) }}
+            <a href="{{ route('task.create') }}" class="btn btn-primary">Add new task</a>
         </div>
     </div>
 </div>
