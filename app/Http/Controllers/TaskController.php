@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Task;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\TaskRequest;
 
 class TaskController extends Controller
 {
@@ -36,9 +36,10 @@ class TaskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
-        //
+        Task::create($request->all());
+        return redirect()->route('task.index')->with('message','item has been added successfully');
     }
 
     /**
@@ -60,7 +61,7 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+          return view('tasks.edit');
     }
 
     /**

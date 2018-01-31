@@ -9,9 +9,9 @@
 
                 <div class="panel-body">
                     You are logged in!
-                    
-<script>
-.container{
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">         
+<style type="text/css">
+row{
  background-color:black;
  width: 100%; 
 }
@@ -62,13 +62,9 @@
   min-height: 400px;
     background-position: center center;
 }
-.bgimg-1 {
-  background-image: url("http://venturads.com/myhelpers/assets/images/ca6-2000x1090-31.jpg");
-  padding-top:600px;
-    min-height: 100%;
-    background-position: left center;
-}
-                    </script>
+
+</style>
+
 <div class="container">
 <div class="row1">
   test
